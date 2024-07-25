@@ -1,8 +1,8 @@
 let dictionary, language, re, qrcode;
 const tables = ["#results_ldp", "#results_nat"];
 const languages = {
-	en:	["English",	"English",	3],
-	ru:	["Russian",	"Russian",	4],
+	en:	["English",	"English",	2],
+	ru:	["Russian",	"Russian",	3],
 };
 
 $(document).ready(function() {
@@ -56,7 +56,7 @@ $(document).ready(function() {
 
 function loadDict(lang, history) {
 	language = lang;
-	Papa.parse("data/master2018.csv", {
+	Papa.parse("data/lidepla.csv", {
 		download: true,
 		header: false,
 		skipEmptyLines: true,
