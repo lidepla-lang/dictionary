@@ -1,8 +1,8 @@
 let dictionary, language, re, qrcode;
 const tables = ["#results_ldp", "#results_nat"];
 const languages = {
-	en:	["English",	"English",	2],
-	ru:	["Russian",	"Russian",	3],
+	en:	["English",	"English",	1],
+	ru:	["Russian",	"Russian",	2],
 };
 
 $(document).ready(function() {
@@ -61,7 +61,7 @@ function loadDict(lang, history) {
 		header: false,
 		skipEmptyLines: true,
 		complete: function(results) {
-			dictionary = results.data.map((entry) => [entry[0] + " " + entry[1], entry[languages[language][2]]]);
+			dictionary = results.data.map((entry) => [entry[1], entry[languages[language][2]]]);
 
 			if(history)
 				pushHistory();
