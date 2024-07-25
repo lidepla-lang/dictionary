@@ -61,7 +61,7 @@ function loadDict(lang, history) {
 		header: false,
 		skipEmptyLines: true,
 		complete: function(results) {
-			dictionary = results.data.map((entry) => [entry[1], entry[languages[language][2]]]);
+			dictionary = results.data.map((entry) => [entry[0], entry[languages[language][2]]]);
 
 			if(history)
 				pushHistory();
